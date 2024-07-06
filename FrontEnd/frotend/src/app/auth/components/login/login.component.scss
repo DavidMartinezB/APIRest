@@ -1,0 +1,34 @@
+#container-login{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    border-radius: 0px;
+    background-color: #000000;
+}
+
+#login-card{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 75%;
+    width: 30%;
+    padding: 20px;
+    border-radius: 0px;
+    box-shadow: none;
+    margin-top: 8%;
+}
+
+.log-form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+h1{
+    color: #000000;
+    font-size: 1.7em;
+    font-weight: 400;
+}

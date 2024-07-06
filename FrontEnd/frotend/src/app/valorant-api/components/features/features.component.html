@@ -1,0 +1,17 @@
+<div class="container-features">
+    <div class="container-header-features">
+        <h2>FEATURES</h2>
+        <p>Echa un vistazo a nuestro <a routerLink="">Dashboard</a> donde encontrarás toda la documentación</p>
+    </div>
+    <div class="container-content-features">
+        <mat-card id="cards" *ngFor="let card of template">
+            <mat-icon>{{card.matIcon}}</mat-icon>
+            <mat-card-header id="mat-card-header">
+                <mat-card-title>{{card.title}}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content id="mat-card-content">
+                <p>{{card.description}}</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

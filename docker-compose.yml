@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb_users
+    restart: always
+    networks:
+      - backend-database
+
+  valorantdb:
+    image: mysql:latest
+    container_name: mysql_valorantdb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Aa11aa11
+    volumes:
+      - ./DB/ValorantDB.sql:/docker-entrypoint-initdb.d/ValorantDB.sql
+      - ./DB/ValorantDBInserts.sql:/docker-entrypoint-initdb.d/ValorantDBInserts.sql
+    networks:
+      - backend-database
+
+  backend:
+
+    image: tfcdaw/nestjs_backend:mail01
+    container_name: nestjs_backend
+    restart: always
+    ports:
+      - "8081:3000"
+    depends_on:
+      - valorantdb
+      - mongodb
+    networks:
+      - backend-database
+
+  frontend:
+    image: tfcdaw/angular_frontend:localhost
+    container_name: angular_frontend
+    restart: always
+    ports:
+      - "81:80"
+    depends_on:
+      - backend
+
+networks:
+  backend-database:

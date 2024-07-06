@@ -1,0 +1,24 @@
+.json-viewer {
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 14px;
+  overflow: auto;
+  max-height: 400px;
+  width: 800px;
+  margin-bottom: 20px;
+  --ngx-json-string: #ffffff;
+  --ngx-json-number: #00ff00;
+  --ngx-json-object: #ffffff;
+  --ngx-json-key: #ffffff;
+}
+
+
+
+.container-trial{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px
+}

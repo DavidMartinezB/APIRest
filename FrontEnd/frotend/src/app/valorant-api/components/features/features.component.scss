@@ -1,0 +1,75 @@
+.container-features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: whitesmoke;
+    width: 100%;
+    height: 100%;
+
+}
+
+.container-header-features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.container-content-features {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    gap: 25px;
+}
+
+#cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 220px;
+    font-size: 20px;
+    background-color: #ff4655;
+    // margin: 20px;
+}
+
+#cards > * {
+    padding: 0;
+    margin: 0;
+}
+
+#cards > mat-icon {
+    font-size: 65px;
+    width: 100%;
+    height: 30%;
+    text-align: center;
+
+}
+
+#mat-card-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+#mat-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+#mat-card-content > p {
+    margin: 0;
+    padding: 0;
+}

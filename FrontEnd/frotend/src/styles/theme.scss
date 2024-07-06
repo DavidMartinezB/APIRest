@@ -1,0 +1,96 @@
+@use '@angular/material' as mat;
+@use '@angular/material' as mat-core;
+
+$valorant-red: #ff4655;
+$valorant-blue: #0f1923;
+$valorant-dark-gray: #2c2f34;
+$valorant-white: #ffffff;
+
+
+$custom-primary-palette: (
+  50: #ffebef,
+  100: #ffccd5,
+  200: #f8989e,
+  300: #f26e78,
+  400: $valorant-red,
+  500: #ff2a3a,
+  600: #f71d3a,
+  700: #e50934,
+  800: #d8002c,
+  900: #c8001f,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  )
+);
+
+
+// Definir una paleta de colores personalizados para el accent usando el color blanco
+$custom-white-palette: (
+  50: $valorant-white,
+  100: $valorant-white,
+  200: $valorant-white,
+  300: $valorant-white,
+  400: $valorant-white,
+  500: $valorant-white,
+  600: $valorant-white,
+  700: $valorant-white,
+  800: $valorant-white,
+  900: $valorant-white,
+  A100: $valorant-white,
+  A200: $valorant-white,
+  A400: $valorant-white,
+  A700: $valorant-white,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  )
+);
+$dark-primary: mat.define-palette($custom-primary-palette, 400);
+
+$dark-accent: mat.define-palette($custom-white-palette);
+
+$dark-warning: mat.define-palette($custom-white-palette);
+
+$dark-theme: mat.define-dark-theme((
+  color: (
+    primary: $dark-primary,
+    accent: $dark-accent,
+    warn: $dark-warning,
+    background: $valorant-blue,
+    surface: $valorant-dark-gray,
+    text: (
+      primary: $valorant-white,
+      secondary: mat.get-color-from-palette($dark-primary, 200),
+      disabled: mat.get-color-from-palette($dark-primary, 500),
+      hint: $valorant-white,
+      icon: $valorant-white
+    )
+  )
+));
+
+@include mat.all-component-themes($dark-theme);

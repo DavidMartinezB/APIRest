@@ -1,0 +1,33 @@
+.container-footer {
+    background-color: rgba($color: #000000, $alpha: 0);
+    color: white;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.disclaimer {
+    padding: 25px;
+    font-size: 1.1rem;
+    margin: 0;
+    width: 50%;
+}  
+
+.contacts {
+    padding: 25px;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+#contact-img {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+}
